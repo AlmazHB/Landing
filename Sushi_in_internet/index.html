@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="tk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Fusion Taste — Dark Edition</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap only for simple utilities (optional) -->
+<link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app container-fluid">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand">Fusion Taste — Dark</div>
+      <div class="subtitle">Awtor fýujyn | Aşgabat</div>
+    </div>
+
+    <nav class="nav" aria-label="main">
+      <a href="#home" class="active">Baş sahypa</a>
+      <a href="#menu">Menýu</a>
+      <a href="#gallery">Galereýa</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+
+    <div>
+      <div class="subtitle">Kategoriýa</div>
+      <div class="filters" id="filters">
+        <!-- chips inserted by JS -->
+      </div>
+    </div>
+
+    <div class="fav-box">
+      <div class="subtitle">Saýlanan tagamlar</div>
+      <div id="favoritesEmpty" style="color:var(--muted);font-size:13px">Saýlanan ýok</div>
+      <div id="favoritesList"></div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div class="badge-accent" id="favCount">0</div>
+        <button class="btn-ghost" id="clearFav">Tazele</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="left">
+        <h1>Fusion Taste — täze duýgy</h1>
+        <p>Awtor tagamlar, ýagty we gara reňkleriň arasyndaky sazlaşyk. Menüni gözden geçirip, öz aýratyn tagamlaryňy seçiň.</p>
+        <div class="cta">
+          <button class="btn-accent" onclick="scrollToSection('menu')">Menýu görmek</button>
+          <button class="btn-ghost" onclick="scrollToSection('gallery')">Galereýa</button>
+        </div>
+      </div>
+      <div class="art">Awtor şekil / vizual</div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menuSec">
+      <h3 style="margin:0 0 12px 6px;color:var(--muted);font-size:13px">Menýu — Awtor tagamlar</h3>
+      <div class="menu-grid" id="menuGrid">
+        <!-- dishes by JS -->
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" style="margin-top:18px">
+      <h3 style="margin:0 0 12px 6px;color:var(--muted);font-size:13px">Galereýa</h3>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:18px;padding:20px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px;border:1px solid var(--glass-border)">
+      <h4 style="margin:0 0 6px 0">Kontakt we bron</h4>
+      <p style="margin:0 0 12px;color:var(--muted)">Telefon ýa-da e-mail arkaly rezervasiýa edin.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="flex:1;min-width:240px">
+          <p style="margin:0"><strong>Salgy</strong>: Aşgabat</p>
+          <p style="margin:0"><strong>Telefon</strong>: +993 65 432 1098</p>
+          <p style="margin:0"><strong>Email</strong>: info@fusiontaste.dark</p>
+        </div>
+        <form id="bookForm" style="flex:1;min-width:260px;display:flex;flex-direction:column;gap:8px">
+          <input class="form-control" id="bname" placeholder="Adyňyz" required>
+          <input class="form-control" id="bphone" placeholder="Telefon" required>
+          <input class="form-control" id="bdate" type="date" required>
+          <button class="btn-accent" type="submit">Bron etmek</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- DISH MODAL -->
+<div class="modal fade" id="dishModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="dishTitle"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="dishImg" src="" alt="" style="width:100%;height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+        <p id="dishDesc" style="color:var(--muted)"></p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div style="font-weight:700" id="dishPrice"></div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-outline-light" id="favBtn"><i class="bi bi-heart"></i> Saýla</button>
+            <button class="btn-accent" id="orderBtn">Sargyt etmek</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS + custom script -->
+<script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

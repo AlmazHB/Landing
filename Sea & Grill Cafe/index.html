@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="tk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sea & Grill | Deniz we Olow</title>
+
+    <link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand brand" href="#">Sea & Grill</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menýu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galereýa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Biz barada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                    <li class="nav-item ms-3"><button class="btn btn-cta" id="openCartBtn"><i class="bi bi-basket3"></i>
+                            Sargytlar (0)</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <div class="hero-left">
+            <h1>Sea & Grill — Deniz tagamlary we göwünli gril</h1>
+            <p>Ýangyçsyz we täzelik: deňizden tabşyryk edilen balyk we ot-gril we özgertilen receptler. Gelip, deňize
+                degiş ýaly tagam dadyp görüň.</p>
+            <div style="margin-top:18px">
+                <a href="#menu" class="btn btn-cta me-2"><i class="bi bi-ui-checks-grid"></i> Menýu</a>
+                <a href="#gallery" class="btn btn-outline-secondary"><i class="bi bi-image"></i> Galereýa</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="img/alexandra-tran-dYSyYlGbfY0-unsplash.jpg" alt="Sea & Grill">
+        </div>
+        <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" width="50%" height="120">
+            <path d="M0.00,49.98 C150.00,150.00 271.79,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke:none;fill:#0ea5b7;"></path>
+        </svg>
+    </header>
+
+    <!-- MENU -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h3>Menýu — Deniz we Grill</h3>
+                <div class="ms-3 section-sub">Täze we täsin tagamlar — deňiz önümlerinden başlap, gril spesiallaryna
+                    çenli</div>
+            </div>
+
+            <!-- category chips -->
+            <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn btn-sm btn-outline-secondary" data-cat="Hemmesi">Hemmesi</button>
+                <button class="btn btn-sm btn-outline-secondary" data-cat="Başlangyçlar">Başlangyçlar</button>
+                <button class="btn btn-sm btn-outline-secondary" data-cat="Esasy">Esasy</button>
+                <button class="btn btn-sm btn-outline-secondary" data-cat="Grill">Grill</button>
+                <button class="btn btn-sm btn-outline-secondary" data-cat="Desert">Desert</button>
+                <button class="btn btn-sm btn-outline-secondary" data-cat="Içgiler">Içgiler</button>
+            </div>
+
+            <!-- horizontal card scroller -->
+            <div class="menu-row" id="menuRow" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section bg-white">
+        <div class="container">
+            <div class="section-title">
+                <h3>Galereýa</h3>
+                <div class="ms-3 section-sub">Interer we tagam suratlary</div>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4>Biz barada</h4>
+                    <p class="text-muted">Sea & Grill — şäheriň kenarynda ýerleşýän kjýimy restoran. Biz iň täze deňiz
+                        önümlerini we ot-grilde taýýarlanan etleri hödürleýäris. Maksadymyz — dagyşly tagam we
+                        ýakynlykly hyzmat.</p>
+                    <ul class="text-muted">
+                        <li>Her gün täzelik: deňiz önümleri ýerinden getiriler</li>
+                        <li>Gril boýunça ýörite tehnika we tecrübe</li>
+                        <li>Aýratyn saýlaw: maşgala ýada romantik güni üçin</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/pexels-diliara-garifullina-1478099210-27363857.jpg" alt="interior"
+                        style="width:100%;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,.06)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOKING -->
+    <section id="contact" class="section bg-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5>Kontakt we bron</h5>
+                    <p class="text-muted">Telefon ýa-da form arkaly ýerde bron ediň.</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> Aşgabat, Türkmenabat köçesi</p>
+                    <p><i class="bi bi-telephone-fill"></i> +993 62 123 4567</p>
+                    <p><i class="bi bi-envelope"></i> info@seaandgrill.tm</p>
+                </div>
+                <div class="col-md-6">
+                    <form id="reserveForm">
+                        <div class="row g-2">
+                            <div class="col-md-6"><input class="form-control" id="rName" placeholder="Adyňyz" required>
+                            </div>
+                            <div class="col-md-6"><input class="form-control" id="rPhone" placeholder="Telefon"
+                                    required></div>
+                            <div class="col-md-6"><input class="form-control" id="rDate" type="date" required></div>
+                            <div class="col-md-6"><input class="form-control" id="rTime" type="time" required></div>
+                            <div class="col-12"><textarea class="form-control" id="rNote"
+                                    placeholder="Öňünden bolar maglumat (islegler)" rows="3"></textarea></div>
+                            <div class="col-12"><button class="btn btn-cta w-100" type="submit">Bron etmek</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- floating side cart -->
+    <div class="side-panel" id="sidePanel" aria-live="polite">
+        <h6>Sagdaýyk / Körzinka</h6>
+        <div class="cart-list" id="cartList">
+            <div style="color:var(--muted)">Sargyt ýok</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div style="font-weight:700">Jemi: <span id="cartTotal">0 TMT</span></div>
+            <button class="btn btn-outline-secondary" id="clearCart">Arassala</button>
+        </div>
+        <div style="margin-top:8px">
+            <button class="btn btn-cta w-100" id="checkoutBtn">Sargyt ugrat</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <small>© <span id="year"></span> Sea & Grill — ähli hukuklar goralan</small>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
